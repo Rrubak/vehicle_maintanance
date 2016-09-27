@@ -1,6 +1,6 @@
 <?php 
 	include_once 'header.php'; 
-	include_once 'get_vehicle_details.php'
+	include_once 'get_vehicle_details.php';
 ?>
 <h1>Monitor Vechicle</h1><hr>
 	<table class="table">

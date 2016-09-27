@@ -1,3 +1,6 @@
+<?php 
+  include_once '../model/db.php';
+ ?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -10,6 +13,8 @@
   <link rel="stylesheet" href="../css/_all-skins.min.css">
   <script src="http://code.jquery.com/jquery-1.5.js"></script>
   <script src="../js/jquery-2.2.3.min.js"></script>
+  <script src = "../js/search_vehicle.js" type="text/javascript"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -34,7 +39,7 @@
               <li class="user-header">
                 <img src="../img/default.png" class="img-circle" alt="User Image">
                 <p>
-                  Bye <?php echo $user_details['user_name']; ?>
+                  Bye User<?php //echo $user_details['user_name']; ?>
                 </p>
               </li>
               <li class="user-footer">
@@ -52,10 +57,8 @@
   <aside class="main-sidebar">
       <section class="sidebar">
         <ul class="sidebar-menu">
-          <!-- <li><a href="home.php"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li> -->
+          <li><a href="home.php"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
           <li><a href="add_vehicle.php"><i class="fa fa-circle-o text-yellow"></i> <span>Add Details</span></a></li>
-          <li><a href="monitor_vehicle.php"><i class="fa fa-circle-o text-aqua"></i> <span>Monitor Vehicle</span></a></li>
-          <li><a href="check_expenditure.php"><i class="fa fa-circle-o text-red"></i> <span>check/Add expenditure</span></a></li>
           <!-- <li><a href="sms_history.php"><i class="fa fa-circle-o text-yellow"></i> <span>Sms History</span></a></li> -->
           <li><a href="add_categeory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add categeory</span></a></li>
           
