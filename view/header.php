@@ -62,7 +62,7 @@
           <li><a href="home.php"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
           <li><a href="add_vehicle.php"><i class="fa fa-circle-o text-yellow"></i> <span>Add Details</span></a></li>
           <!-- <li><a href="sms_history.php"><i class="fa fa-circle-o text-yellow"></i> <span>Sms History</span></a></li> -->
-          <li><a href="add_categeory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add categeory</span></a></li>
+          <li><a href="add_catagory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add categeory</span></a></li>
           
           
         </ul>
