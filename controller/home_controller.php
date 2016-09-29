@@ -2,6 +2,7 @@
 	session_start(); 
 	include_once '../model/db.php';	
 	$conn = db_connect();
+	$date = date("Y-m-d");
 	$id = select('`id`','bus_details', array('vehicle_no' => $_GET['vehicle_no']), $conn);
 	$_SESSION['id'] = $id['0']['id'];
 	$column_names = ' `vehicle_no`, `permit`, `insurance`, `tax`, `make`, `model`, `engine_no`, `chass_no`, `no_of_seats`';
@@ -24,6 +25,11 @@
   		$final_content = $final_content.'<tr><td>'.$title[$i].'</td><td>'.$value.'</td></tr>';
   		$i++;
 	}
+	$catagory_options = get_catagory_options();
+	$total_html="";
+	foreach ($catagory_options as $key => $catagory_option) {
+		$total_html = $total_html."<option>".$catagory_option['catagory_name']."</option>";
+	}
   	$final_content = $final_content.'</table></div>
 
   			<div id="tab2" class="tab">
@@ -33,7 +39,9 @@
 					<p>Categeory:- </p>
 					</td>
 					<td>
-					<input type="text" name="catagory" id="categeory" class="form-control" placeholder="categeory"  required autofocus><br/>
+						<select name="catagory" placeholder="Categeory" class="form-control" id="catagory" required>
+							'.$total_html.'
+						</select>
 					</td>
 					</tr>
 					<tr>
@@ -49,7 +57,14 @@
 					<p>Date of entry :- </p>
 					</td>
 					<td>
-					<input type="date" name="date_of_entry" id="date_of_entry" class="form-control" placeholder="Date of entry"  required><br/>
+					<input type="date" name="date_of_entry" id="date_of_entry" class="form-control" value="'.$date.'" placeholder="Date of entry"  required><br/>
+					</td>
+					</tr>
+					<tr>
+					<td>
+					</td>
+					<td>
+					<input type="submit"  id="add_expenditure" class="form-control" value="Add"><br/>
 					</td>
 					</tr>
 				</table>
@@ -67,10 +82,10 @@
 					</tr>
 					<tr>
 						<td>
-						<input type="date" name="start_date" id="start_date" class="form-control">
+						<input type="date" name="start_date" id="start_date" value="'.$date.'"  class="form-control">
 						</td>
 						<td>
-						<input type="date" name="end_date" id="end_date" class="form-control">
+						<input type="date" name="end_date" id="end_date" value="'.$date.'"  class="form-control">
 						</td>
 						<td>
 						<input type="submit" value="Get details" id="get_expenditure_details" class="form-control">
@@ -82,3 +97,9 @@
   			</div>
   			</div>';
   	echo $final_content;
+
+  	function get_catagory_options(){
+  		$conn = db_connect();
+		$catagory_options = select("catagory_name","catagory","",$conn);
+		return $catagory_options;
+  	}

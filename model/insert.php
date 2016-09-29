@@ -3,8 +3,11 @@
 	function insert($table_name, $column_names_and_values, $conn){
 		$table_name = sanitize($table_name, $conn);
 		$sql = get_insert_query($table_name, $column_names_and_values, $conn);
-		echo $sql;
-		return execute_query($sql, $conn);
+		if(execute_query($sql, $conn) == 1){
+			return "inserted";
+		}else{
+			return "error";
+		}
 	}
 
 	function get_insert_query($table_name, $column_names_and_values, $conn){

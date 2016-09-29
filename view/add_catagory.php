@@ -22,14 +22,14 @@
 			}
 
 		?>
-		<form method="post" action="../app/add_catagory.php">
+		<form method="post" action="../controller/add_catagory.php">
 			<input type="textbox" name="catagory_name" class="form-control" placeholder="Catogory Name" required autofocus><br/>
 		</form>
 		<hr style="border-top: 1px solid #191616">
 	</div>
 	<div class="home_content">
 		<?php
-			include_once '../controllers/add_catagory_controller.php';
+			include_once '../controller/add_catagory_controller.php';
 			$total_catagories = get_total_catagory();
 			if($total_catagories != "empty"){
 		?>
