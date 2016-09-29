@@ -14,7 +14,7 @@
 					<p>Bus No :- </p>
 				</td>
 				<td>
-					<input type="text" name="vehicle_no" id="vehicle_no" class="form-control" placeholder="vehicle_no"  required autofocus><br/>
+					<input type="text" name="vehicle_no" id="vehicle_no" class="form-control" placeholder="Vehicle No"  required autofocus><br/>
 				</td>
 			</tr>
 			<tr>
@@ -22,7 +22,7 @@
 					<p>Permit :- </p>
 				</td>
 				<td>
-					<input type="date" name="permit" id="permit" class="form-control" placeholder="permit"  required><br/>
+					<input type="date" name="permit" id="permit" class="form-control" placeholder="Permit"  required><br/>
 				</td>
 			</tr>
 			<tr>
@@ -30,14 +30,14 @@
 					<p>Insurance :- </p>
 				</td>
 				<td>
-					<input type="date" name="insurance" id="insurance" class="form-control" placeholder="insurance"  required><br/>
+					<input type="date" name="insurance" id="insurance" class="form-control" placeholder="Insurance"  required><br/>
 				</td>
 			</tr><tr>
 				<td>
 					<p>Tax :- </p>
 				</td>
 				<td>
-					<input type="date" name="tax" id="tax" class="form-control" placeholder="tax"  required><br/>
+					<input type="date" name="tax" id="tax" class="form-control" placeholder="Tax"  required><br/>
 				</td>
 			</tr>
 			<tr>
@@ -45,7 +45,7 @@
 					<p>Make :- </p>
 				</td>
 				<td>
-					<input type="date" name="make" id="make" class="form-control" placeholder="make"  required><br/>
+					<input type="date" name="make" id="make" class="form-control" placeholder="Make"  required><br/>
 				</td>
 			</tr>
 			<tr>
@@ -53,7 +53,7 @@
 					<p>Model :- </p>
 				</td>
 				<td>
-					<input type="number" name="model" id="model" class="form-control" placeholder="model"  required><br/>
+					<input type="number" name="model" id="model" class="form-control" placeholder="Model"  required><br/>
 				</td>
 			</tr>
 			<tr>

@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/AdminLTE.min.css">
   <link rel="stylesheet" href="../css/_all-skins.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
   <script src="http://code.jquery.com/jquery-1.5.js"></script>
   <script src="../js/jquery-2.2.3.min.js"></script>
-  <script src = "../js/search_vehicle.js" type="text/javascript"></script>
-  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+  <script src = "../js/home_controller.js" type="text/javascript"></script>
+  <script src="../js/jquery-ui.js" ></script>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple-light sidebar-mini">
 <div class="wrapper">
   <!-- header -->
   <header class="main-header">
@@ -39,14 +41,14 @@
               <li class="user-header">
                 <img src="../img/default.png" class="img-circle" alt="User Image">
                 <p>
-                  Bye User<?php //echo $user_details['user_name']; ?>
+                  Welcome User
                 </p>
               </li>
-              <li class="user-footer">
+              <!-- <li class="user-footer">
                 <div class="pull-right">
                   <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </li>
         </ul>

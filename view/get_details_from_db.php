@@ -1,5 +1,7 @@
 <?php 
-
-	print_r($_POST);
+	session_start();
+	// print_r($_POST);
+	include_once '../model/db.php';
 	$conn = db_connect();
-	select('',$_POST,$conn);
+	// print_r($_SESSION['id']);
+	
