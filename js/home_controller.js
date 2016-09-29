@@ -24,7 +24,7 @@ $(document).ready(function(){
 			url : "../view/get_expenditure_from_db.php",
 			data : {start_date : start_date ,end_date :end_date},
 			success: function(data){
-				console.log(data);
+				document.getElementById('my_content').innerHTML = data ;
 			}
 		});
 	});
@@ -37,7 +37,11 @@ $(document).ready(function(){
 			url : "../controller/add_expenditure_to_db.php",
 			data : {catagory : catagory , cost :cost, date_of_entry : date_of_entry },
 			success: function(data){
-				console.log(data);
+				if (data =="inserted") {
+					window.location.href = "../view/home.php?response=inserted";
+				}else{
+					window.location.href = "../view/home.php?response=notinserted";
+				}
 			}
 		});
 	});
