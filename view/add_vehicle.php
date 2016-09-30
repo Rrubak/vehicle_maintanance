@@ -11,7 +11,7 @@
 	<table class="table" style="width:44%;">
 			<tr>
 				<td>
-					<p>Bus No :- </p>
+					<p>Bus No : </p>
 				</td>
 				<td>
 					<input type="text" name="vehicle_no" id="vehicle_no" maxlength="15" class="form-control" placeholder="Vehicle No"  required autofocus><br/>
@@ -19,7 +19,7 @@
 			</tr>
 			<tr>
 				<td>
-					<p>Permit :- </p>
+					<p>Permit : </p>
 				</td>
 				<td>
 					<input type="date" name="permit" id="permit" class="form-control" placeholder="Permit"  required><br/>
@@ -27,14 +27,14 @@
 			</tr>
 			<tr>
 				<td>
-					<p>Insurance :- </p>
+					<p>Insurance : </p>
 				</td>
 				<td>
 					<input type="date" name="insurance" id="insurance" class="form-control" placeholder="Insurance"  required><br/>
 				</td>
 			</tr><tr>
 				<td>
-					<p>Tax :- </p>
+					<p>Tax : </p>
 				</td>
 				<td>
 					<input type="date" name="tax" id="tax" class="form-control" placeholder="Tax"  required><br/>
@@ -42,7 +42,7 @@
 			</tr>
 			<tr>
 				<td>
-					<p>Make :- </p>
+					<p>Make : </p>
 				</td>
 				<td>
 					<input type="date" name="make" id="make" class="form-control" placeholder="Make"  required><br/>
@@ -50,31 +50,32 @@
 			</tr>
 			<tr>
 				<td>
-					<p>Model :- </p>
+					<p>Model : </p>
 				</td>
 				<td>
-					<input type="number" name="model" id="model" maxlength="20" class="form-control" placeholder="Model"  required><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>Engine No :- </p>
-				</td>
-				<td>
-					<input type="number" name="engine_no" id="engine_no" maxlength="20" class="form-control" placeholder="Engine No"  required s><br/>
+					<input type="text" name="model" id="model" pattern="[A-Z0-9a-z]{1,20}" maxlength="20" class="form-control" placeholder="Model"  required><br/>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Chass No :- </p>
+					<p>Engine No : </p>
 				</td>
 				<td>
-					<input type="number" name="chass_no" id="chass_no" maxlength="20" class="form-control" placeholder="Chass No"  required><br/>
+					<input type="text" name="engine_no" id="engine_no" pattern="[A-Z0-9a-z]{1,20}" maxlength="20" class="form-control" placeholder="Engine No"  required s><br/>
+					<div id="alert"></div>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Available Seats :- </p>
+					<p>Chass No : </p>
+				</td>
+				<td>
+					<input type="text" name="chass_no" pattern="[A-Z0-9a-z]{1,20}" id="chass_no" maxlength="20" class="form-control" placeholder="Chass No"  required><br/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Available Seats : </p>
 				</td>
 				<td>
 					<input type="number" name="no_of_seats" id="no_of_seats" maxlength="3" class="form-control" placeholder="Available Seats"  required><br/>

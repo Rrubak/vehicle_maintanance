@@ -39,25 +39,25 @@
 					<table class="table" style="width:44%;">
 						<tr>
 						<td>
-						<p>Categeory:- </p>
+						<p><strong>Categeory: </strong></p>
 						</td>
 						<td>
-							<select name="catagory" placeholder="Categeory" class="form-control" id="catagory" required>
+							<select name="catagory" placeholder="Category" class="form-control" id="catagory" required>
 								'.$total_html.'
 							</select>
 						</td>
 						</tr>
 						<tr>
 						<td>
-						<p>Cost :- </p>
+						<p><strong>Cost : </strong></p>
 						</td>
 						<td>
-						<input type="number" name="cost" id="cost" class="form-control" placeholder="Cost"  required><br/>
+						<input type="number" name="cost" id="cost" pattern="[0-9]{1,15}" min="1" class="form-control" placeholder="Cost"  required><br/>
 						</td>
 						</tr>
 						<tr>
 						<td>
-						<p>Date of entry :- </p>
+						<p><strong>Date of Entry :</strong> </p>
 						</td>
 						<td>
 						<input type="date" name="date_of_entry" id="date_of_entry" class="form-control" value="'.$date.'" placeholder="Date of entry"  required><br/>
@@ -76,12 +76,12 @@
 	  			<div id="tab3" class="tab">
 					<table class="table">
 						<tr>
-							<td>
+							<td><strong>
 							Start Date
-							</td>
-							<td>
+							</td></strong>
+							<td><strong>
 							End Date
-							</td>
+							</td></strong>
 						</tr>
 						<tr>
 							<td>

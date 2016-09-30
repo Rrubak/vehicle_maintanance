@@ -13,7 +13,7 @@
 			<td>'.$final_data['cost'].'</td></tr>';
 			$total_amount = $total_amount+$final_data['cost'];
 		}
-		$f_val = "<table class='table'><tr><td>Date</td><td>Expance For</td><td>Amount</td></tr>".$f_val . '<tr><td></td><td>Total Amount :-</td><td>'.$total_amount.'</td></table>';
+		$f_val = "<table class='table'><tr><td>Date</td><td>Expance For</td><td>Amount</td></tr>".$f_val . '<tr><td></td><td><strong>Total Amount :</strong></td><td>'.$total_amount.'</td></table>';
 
 		echo $f_val;
 	}

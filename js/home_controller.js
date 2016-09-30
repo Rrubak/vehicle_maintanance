@@ -2,7 +2,6 @@ $(document).ready(function(){
 	$( "#search_vehicle" ).autocomplete({
 		source: '../view/search.php'
 	});
-
 	$('#search_vehicle').keypress(function(e){
 		vehicle_no = document.getElementById('search_vehicle').value;
         if(e.which == 13){
@@ -31,16 +30,16 @@ $(document).ready(function(){
 	$('body').on('click', "#add_expenditure", function(){
 		catagory = document.getElementById('catagory').value;
 		cost = document.getElementById('cost').value;
-		date_of_entry = document.getElementById('date_of_entry').value;
+		date_of_entry =document.getElementById('date_of_entry').value;
 		$.ajax({
 			type : "POST",
 			url : "../controller/add_expenditure_to_db.php",
 			data : {catagory : catagory , cost :cost, date_of_entry : date_of_entry },
 			success: function(data){
 				if (data =="inserted") {
-					window.location.href = "../view/home.php?response=inserted";
+					 document.getElementById('response').innerHTML = '<div class="alert alert-success"><strong>Success!</strong>Expenditure added successfully.</div>';
 				}else{
-					window.location.href = "../view/home.php?response=notinserted";
+					 document.getElementById('response').innerHTML = '<div class="alert alert-warning"><strong>Sorry!</strong> Catagory name already present or Something went wrongly.</div>';
 				}
 			}
 		});

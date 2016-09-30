@@ -1,6 +1,6 @@
 <?php include_once 'header.php'; ?>
 	<div class="home_header">
-		<h1>Add Catagory</h1>
+		<h1>Add Category</h1>
 		<br>
 		<?php
 			if(isset($_GET['status'])){
@@ -23,7 +23,7 @@
 
 		?>
 		<form method="post" action="../controller/add_catagory.php">
-			<input type="textbox" name="catagory_name" class="form-control" placeholder="Catogory Name" required autofocus><br/>
+			<input type="textbox" name="catagory_name" pattern="[A-Za-z]{1,30}" maxlength="30" class="form-control" placeholder="Category Name" required autofocus><br/>
 		</form>
 		<hr style="border-top: 1px solid #191616">
 	</div>
@@ -36,9 +36,9 @@
 		<table class="table table-hover">
 		<thead>
 		<tr>
-		<th>No</th>
-		<th>CatagoryName</th>
-		<th>Options</th>
+		<th><strong>S.No</strong></th>
+		<th><strong>CategoryName</strong></th>
+		<th><strong>Options</strong></th>
 		</tr>
 		</thead>
 		<tbody>
