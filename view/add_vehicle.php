@@ -14,7 +14,7 @@
 					<p>Bus No :- </p>
 				</td>
 				<td>
-					<input type="text" name="vehicle_no" id="vehicle_no" class="form-control" placeholder="Vehicle No"  required autofocus><br/>
+					<input type="text" name="vehicle_no" id="vehicle_no" maxlength="15" class="form-control" placeholder="Vehicle No"  required autofocus><br/>
 				</td>
 			</tr>
 			<tr>
@@ -53,7 +53,7 @@
 					<p>Model :- </p>
 				</td>
 				<td>
-					<input type="number" name="model" id="model" class="form-control" placeholder="Model"  required><br/>
+					<input type="number" name="model" id="model" maxlength="20" class="form-control" placeholder="Model"  required><br/>
 				</td>
 			</tr>
 			<tr>
@@ -61,7 +61,7 @@
 					<p>Engine No :- </p>
 				</td>
 				<td>
-					<input type="number" name="engine_no" id="engine_no" class="form-control" placeholder="Engine No"  required s><br/>
+					<input type="number" name="engine_no" id="engine_no" maxlength="20" class="form-control" placeholder="Engine No"  required s><br/>
 				</td>
 			</tr>
 			<tr>
@@ -69,7 +69,7 @@
 					<p>Chass No :- </p>
 				</td>
 				<td>
-					<input type="number" name="chass_no" id="chass_no" class="form-control" placeholder="Chass No"  required><br/>
+					<input type="number" name="chass_no" id="chass_no" maxlength="20" class="form-control" placeholder="Chass No"  required><br/>
 				</td>
 			</tr>
 			<tr>
@@ -77,7 +77,7 @@
 					<p>Available Seats :- </p>
 				</td>
 				<td>
-					<input type="number" name="no_of_seats" id="no_of_seats" class="form-control" placeholder="Available Seats"  required><br/>
+					<input type="number" name="no_of_seats" id="no_of_seats" maxlength="3" class="form-control" placeholder="Available Seats"  required><br/>
 				</td>
 			</tr>
 			<tr>
