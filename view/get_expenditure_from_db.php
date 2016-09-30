@@ -8,12 +8,12 @@
 		$total_amount = 0;
 		foreach ($final as $final_data) {  
 			$f_val = $f_val.'<tr>
-			<td>'.$final_data['date_of_entry'].'</td>
+			<td>'.change_date_formet($final_data['date_of_entry']).'</td>
 			<td>'.get_catagory_name($final_data['catagory_id'] , $conn).'</td>
 			<td>'.$final_data['cost'].'</td></tr>';
 			$total_amount = $total_amount+$final_data['cost'];
 		}
-		$f_val = "<table class='table'><tr><td>Date</td><td>Expance For</td><td>Amount</td></tr>".$f_val . '<tr><td></td><td><strong>Total Amount :</strong></td><td>'.$total_amount.'</td></table>';
+		$f_val = "<table class='table'><tr><td><b>Date</b></td><td><b>Expense For</b></td><td><b>Amount</b></td></tr>".$f_val . '<tr><td></td><td><strong>Total Amount :</strong></td><td>'.$total_amount.'</td></table>';
 
 		echo $f_val;
 	}
@@ -26,3 +26,9 @@
 		$final_cat_name = select('catagory_name','catagory', $condition, $conn);
 		return $final_cat_name[0]['catagory_name'];
 	} 
+
+	function change_date_formet($date){
+		$splited_old_date = explode("-", $date);
+		$new_date = $splited_old_date[2]."-".$splited_old_date[1]."-".$splited_old_date[0];
+		return $new_date;
+	}

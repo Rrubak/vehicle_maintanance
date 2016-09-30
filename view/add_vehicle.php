@@ -14,7 +14,7 @@
 					<p>Bus No : </p>
 				</td>
 				<td>
-					<input type="text" name="vehicle_no" id="vehicle_no" maxlength="15" class="form-control" placeholder="Vehicle No"  required autofocus><br/>
+					<input type="text" name="vehicle_no" id="vehicle_no" pattern="[A-Z0-9a-z]{1,20}" minlength="9" maxlength="18" class="form-control" placeholder="Vehicle No"  required autofocus><br/>
 				</td>
 			</tr>
 			<tr>

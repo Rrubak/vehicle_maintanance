@@ -25,7 +25,13 @@
 	  	 $title = array('1' =>"Vehicle No" ,'2' =>"Permit" ,'3' =>"Insurance" ,'4' =>"Tax" ,'5' =>"Make" ,'6' =>"Model" ,'7' =>"Engine No" ,'8' =>"Chass No" ,'9' =>"Available Seats" );
 	  	 $i = 1;
 	  	foreach ($current_vehicle as $key => $value) {
-	  		$final_content = $final_content.'<tr><td>'.$title[$i].'</td><td>'.$value.'</td></tr>';
+	  		$value = explode("-", $value);
+	  		if(count($value) == 1){
+	  			$final_value = $value[0];
+	  		}else{
+	  			$final_value = $value[2]."-".$value[1]."-".$value[0];
+	  		}
+	  		$final_content = $final_content.'<tr><td>'.$title[$i].'</td><td>'.$final_value.'</td></tr>';
 	  		$i++;
 		}
 		$catagory_options = get_catagory_options();
@@ -36,41 +42,43 @@
 	  	$final_content = $final_content.'</table></div>
 
 	  			<div id="tab2" class="tab">
-					<table class="table" style="width:44%;">
-						<tr>
-						<td>
-						<p><strong>Categeory: </strong></p>
-						</td>
-						<td>
-							<select name="catagory" placeholder="Category" class="form-control" id="catagory" required>
-								'.$total_html.'
-							</select>
-						</td>
-						</tr>
-						<tr>
-						<td>
-						<p><strong>Cost : </strong></p>
-						</td>
-						<td>
-						<input type="number" name="cost" id="cost" pattern="[0-9]{1,15}" min="1" class="form-control" placeholder="Cost"  required><br/>
-						</td>
-						</tr>
-						<tr>
-						<td>
-						<p><strong>Date of Entry :</strong> </p>
-						</td>
-						<td>
-						<input type="date" name="date_of_entry" id="date_of_entry" class="form-control" value="'.$date.'" placeholder="Date of entry"  required><br/>
-						</td>
-						</tr>
-						<tr>
-						<td>
-						</td>
-						<td>
-						<input type="submit"  id="add_expenditure" class="form-control" value="Add"><br/>
-						</td>
-						</tr>
-					</table>
+	  				<form id="form1">
+						<table class="table" style="width:44%;">
+							<tr>
+							<td>
+							<p><strong>Categeory: </strong></p>
+							</td>
+							<td>
+								<select name="catagory" placeholder="Category" class="form-control" id="catagory" required>
+									'.$total_html.'
+								</select>
+							</td>
+							</tr>
+							<tr>
+							<td>
+							<p><strong>Cost : </strong></p>
+							</td>
+							<td>
+							<input type="number" name="cost" id="cost" pattern="[0-9]{1,15}" min="1" class="form-control" placeholder="Cost"  required><br/>
+							</td>
+							</tr>
+							<tr>
+							<td>
+							<p><strong>Date of Entry :</strong> </p>
+							</td>
+							<td>
+							<input type="date" name="date_of_entry" id="date_of_entry" class="form-control" value="'.$date.'" placeholder="Date of entry"  required><br/>
+							</td>
+							</tr>
+							<tr>
+							<td>
+							</td>
+							<td>
+							<input type="submit"  id="add_expenditure" class="form-control" value="Add"><br/>
+							</td>
+							</tr>
+						</table>
+					</form>
 	  			</div>
 
 	  			<div id="tab3" class="tab">
@@ -108,3 +116,8 @@
 		$catagory_options = select("catagory_name","catagory","",$conn);
 		return $catagory_options;
   	}
+
+	function validateDate($date, $format = 'Y-m-d H:i:s') {
+		$d = DateTime::createFromFormat($format, $date);
+		return $d && $d->format($format) == $date;
+	}
