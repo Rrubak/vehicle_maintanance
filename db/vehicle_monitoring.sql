@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2016 at 02:54 PM
+-- Generation Time: Sep 30, 2016 at 03:34 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.5.30
 
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bus_monitoring`
+-- Table structure for table `bus_details`
 --
 
-CREATE TABLE `bus_monitoring` (
+CREATE TABLE `bus_details` (
   `id` int(255) NOT NULL,
   `vehicle_no` varchar(255) NOT NULL,
   `permit` date NOT NULL,
@@ -40,21 +40,100 @@ CREATE TABLE `bus_monitoring` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `bus_monitoring`
+-- Dumping data for table `bus_details`
 --
 
-INSERT INTO `bus_monitoring` (`id`, `vehicle_no`, `permit`, `insurance`, `tax`, `make`, `model`, `engine_no`, `chass_no`, `no_of_seats`) VALUES
-(1, '9630', '2016-09-27', '2016-09-27', '2016-09-27', '2016-09-27', '1020', '10', '50', 60),
-(2, '', '0000-00-00', '0000-00-00', '0000-00-00', '0000-00-00', '', '', '', 0);
+INSERT INTO `bus_details` (`id`, `vehicle_no`, `permit`, `insurance`, `tax`, `make`, `model`, `engine_no`, `chass_no`, `no_of_seats`) VALUES
+(1, 'TN 52 9578', '2016-09-26', '2016-09-26', '2016-09-26', '2016-09-26', '1', '2', '3', 1),
+(2, 'mfggm', '1998-04-04', '2016-02-12', '2011-12-25', '2000-02-12', '38478932', '32423', '00000000000000000000000000000000000', 79034),
+(3, '9630', '2016-01-01', '2016-01-01', '2016-01-01', '2016-01-01', '1', '1', '1', 1),
+(4, 'asdasdasadf', '2016-01-01', '2016-01-01', '2016-01-01', '2016-01-01', '132', 'edf', 'waer', 123);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `catagory`
+--
+
+CREATE TABLE `catagory` (
+  `id` int(10) NOT NULL,
+  `catagory_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `catagory`
+--
+
+INSERT INTO `catagory` (`id`, `catagory_name`) VALUES
+(5, 'Electrical Works'),
+(6, 'Fc Expenditure'),
+(4, 'Machine Works');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expenditure`
+--
+
+CREATE TABLE `expenditure` (
+  `id` int(10) NOT NULL,
+  `vehicle_id` int(10) NOT NULL,
+  `catagory_id` int(10) NOT NULL,
+  `cost` int(255) NOT NULL,
+  `date_of_entry` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `expenditure`
+--
+
+INSERT INTO `expenditure` (`id`, `vehicle_id`, `catagory_id`, `cost`, `date_of_entry`) VALUES
+(1, 1, 5, 1000, '2016-09-29'),
+(3, 1, 4, 0, '2016-09-29'),
+(4, 1, 5, 100, '2016-09-28'),
+(5, 1, 6, 46, '2016-09-29'),
+(6, 1, 4, 120, '2016-09-29'),
+(7, 1, 6, 124444, '2016-09-29'),
+(8, 1, 5, 0, '2016-09-29'),
+(9, 1, 5, 1000, '2016-09-29'),
+(10, 1, 5, 0, '2016-09-29'),
+(11, 1, 5, -787687768, '2016-09-29'),
+(12, 1, 5, 0, '2016-09-29'),
+(13, 1, 5, 0, '2016-09-29'),
+(14, 1, 5, 0, '2016-09-29'),
+(15, 1, 5, 0, '2016-09-01'),
+(16, 1, 5, 11110, '2016-09-30'),
+(17, 1, 5, 0, '2016-09-30'),
+(18, 1, 5, 0, '2016-09-30'),
+(19, 1, 5, -111, '2016-09-30'),
+(20, 1, 5, 11, '2016-09-30'),
+(21, 1, 5, 0, '2016-09-30'),
+(22, 4, 6, 2134, '2016-09-30'),
+(23, 4, 6, 2134, '2016-09-30'),
+(24, 4, 6, 2134, '2016-09-30');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `bus_monitoring`
+-- Indexes for table `bus_details`
 --
-ALTER TABLE `bus_monitoring`
+ALTER TABLE `bus_details`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `vehicle_no` (`vehicle_no`);
+
+--
+-- Indexes for table `catagory`
+--
+ALTER TABLE `catagory`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `category` (`catagory_name`);
+
+--
+-- Indexes for table `expenditure`
+--
+ALTER TABLE `expenditure`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -62,10 +141,20 @@ ALTER TABLE `bus_monitoring`
 --
 
 --
--- AUTO_INCREMENT for table `bus_monitoring`
+-- AUTO_INCREMENT for table `bus_details`
 --
-ALTER TABLE `bus_monitoring`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `bus_details`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `catagory`
+--
+ALTER TABLE `catagory`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `expenditure`
+--
+ALTER TABLE `expenditure`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
