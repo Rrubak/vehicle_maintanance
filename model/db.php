@@ -1,7 +1,7 @@
 <?php 
 	
 	include_once 'curd_operations.php';
-
+	session_start();
 	function db_connect(){
 		$connection = mysqli_connect("localhost", "root", "", "vehicle_monitoring");
 		if (!$connection) {
@@ -44,4 +44,21 @@
 
 	function emptty($value){
 		return empty($value);
+	}
+
+	function login_page_admin_session_check(){
+		if(isset($_SESSION["adminDetails"])){
+			header('location:home.php');
+		}
+	}
+	function create_admin_session($data){
+	$_SESSION["adminDetails"] = $data;
+	if(isset($_SESSION['adminDetails'])){
+		return true;
+	}
+	return false;
+	}
+
+	function log_out(){
+		session_destroy();   
 	}

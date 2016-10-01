@@ -41,14 +41,14 @@
               <li class="user-header">
                 <img src="../img/default.png" class="img-circle" alt="User Image">
                 <p>
-                  Welcome User
+                  Welcome <?php echo $_SESSION["adminDetails"]['name']; ?>
                 </p>
               </li>
-              <!-- <li class="user-footer">
+              <li class="user-footer">
                 <div class="pull-right">
                   <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
-              </li> -->
+              </li>
             </ul>
           </li>
         </ul>
@@ -61,7 +61,6 @@
         <ul class="sidebar-menu">
           <li><a href="home.php"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
           <li><a href="add_vehicle.php"><i class="fa fa-circle-o text-yellow"></i> <span>Add Details</span></a></li>
-          <!-- <li><a href="sms_history.php"><i class="fa fa-circle-o text-yellow"></i> <span>Sms History</span></a></li> -->
           <li><a href="add_catagory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add category</span></a></li>
           
           
