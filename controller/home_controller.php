@@ -1,5 +1,4 @@
 <?php
-	session_start(); 
 	include_once '../model/db.php';	
 	$conn = db_connect();
 	$date = date("Y-m-d");
