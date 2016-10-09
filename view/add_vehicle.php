@@ -3,7 +3,9 @@
 	if (isset($_GET['status'])) {
 		if ($_GET['status'] =="notinserted"){
 			echo '<div class="alert alert-danger"><strong>Some problem occured!</strong> Not Updated.</div>';
-		}	
+		}else{
+			echo '<div class="alert alert-success"><strong>Vehicle Added!</strong> </div>';
+		}
 	}
 	
 	?>
@@ -85,7 +87,7 @@
 				<td>
 				</td>
 				<td>
-					<input type="submit" id="submit" class="form-control" value="Add vehicle"  ><br/>
+					<input type="submit"  class="form-control" value="Add vehicle"  ><br/>
 				</td>
 			</tr>
 	</table>

@@ -17,6 +17,7 @@
   <script src="../js/jquery-2.2.3.min.js"></script>
   <script src = "../js/home_controller.js" type="text/javascript"></script>
   <script src="../js/jquery-ui.js" ></script>
+  <script src="../js/all_vehicle.js" ></script>
 </head>
 <body class="hold-transition skin-purple-light sidebar-mini">
 <div class="wrapper">
@@ -62,8 +63,8 @@
           <li><a href="home.php"><i class="fa fa-circle-o text-red "></i> <span>Dashboard</span></a></li>
           <li><a href="add_vehicle.php"><i class="fa fa-circle-o text-yellow"></i> <span>Add Details</span></a></li>
           <li><a href="add_catagory.php"><i class="fa fa-circle-o text-aqua"></i> <span>Add category</span></a></li>
-          
-          
+          <li><a href="all_vehicles.php"><i class="fa fa-circle-o text-aqua"></i> <span>All Vehicles</span></a></li>
+          <li><a href="update_vehicles.php"><i class="fa fa-circle-o text-aqua"></i> <span>Update Vehicle Details</span></a></li>
         </ul>
       </section>
   </aside>

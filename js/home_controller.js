@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	document.getElementById('response').innerHTML ="";
 	$( "#search_vehicle" ).autocomplete({
 		source: '../view/search.php'
 	});
@@ -8,8 +7,7 @@ $(document).ready(function(){
         if(e.which == 13){
         	$("#form").submit();
         }
-	});
-	$("#form").submit(function(e){
+        	$("#form").submit(function(e){
 			e.preventDefault();
 			if (vehicle_no.length >= 9) {
 				$.ajax({
@@ -24,6 +22,8 @@ $(document).ready(function(){
 				document.getElementById('div').innerHTML = "<br>Sorry,You have made a mistake on Vehicle No" ;
 			}
 	});
+	});
+
 	$('body').on('click', "#get_expenditure_details", function(){
 		start_date = document.getElementById('start_date').value;
 		end_date = document.getElementById('end_date').value;

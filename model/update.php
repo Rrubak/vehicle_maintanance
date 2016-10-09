@@ -2,10 +2,11 @@
 	
 	function update($column_names, $table_name, $conditions, $con){
 		$sql = get_update_query($column_names, $table_name, $conditions);
+		// print_r($sql);
 		if($result = execute_query($sql, $con)){
-			return 1;
+			return "updated";
 		} else{
-			return 0;
+			return "success";
 		}
 	}
 
