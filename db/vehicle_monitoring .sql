@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2016 at 03:34 PM
+-- Generation Time: Oct 09, 2016 at 02:26 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.5.30
 
@@ -44,10 +44,8 @@ CREATE TABLE `bus_details` (
 --
 
 INSERT INTO `bus_details` (`id`, `vehicle_no`, `permit`, `insurance`, `tax`, `make`, `model`, `engine_no`, `chass_no`, `no_of_seats`) VALUES
-(1, 'TN 52 9578', '2016-09-26', '2016-09-26', '2016-09-26', '2016-09-26', '1', '2', '3', 1),
-(2, 'mfggm', '1998-04-04', '2016-02-12', '2011-12-25', '2000-02-12', '38478932', '32423', '00000000000000000000000000000000000', 79034),
-(3, '9630', '2016-01-01', '2016-01-01', '2016-01-01', '2016-01-01', '1', '1', '1', 1),
-(4, 'asdasdasadf', '2016-01-01', '2016-01-01', '2016-01-01', '2016-01-01', '132', 'edf', 'waer', 123);
+(1, 'TN52k9578', '2016-09-26', '2016-09-26', '2016-09-26', '2016-09-26', '1', '2', '1', 1),
+(5, 'tn28v5362', '2016-10-16', '2016-10-16', '2016-10-09', '2016-10-08', '1', 'abc123', 'qqqabcxyz', 510);
 
 -- --------------------------------------------------------
 
@@ -144,12 +142,12 @@ ALTER TABLE `expenditure`
 -- AUTO_INCREMENT for table `bus_details`
 --
 ALTER TABLE `bus_details`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `catagory`
 --
 ALTER TABLE `catagory`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `expenditure`
 --
