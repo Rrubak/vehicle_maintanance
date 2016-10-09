@@ -1,4 +1,13 @@
-<?php include_once 'header.php';?>	
+<?php 
+	include_once 'header.php';
+	if (isset($_GET['response'])) {
+		if ($_GET['response'] =="notinserted"){
+			echo '<div class="alert alert-danger"><strong>Some problem occured!</strong> Not Updated.</div>';
+		}else{
+			echo '<div class="alert alert-success"><strong>Vehicle Updated!</strong> </div>';
+		}
+	}
+?>	
 	<form action ="update_vehicle_controller.php" method="post" >
 	<h1>Enter Vehicle Number</h1>
 	<input type="text" name="vehicle_name" id="find_vehicle" minlength="9" maxlength="18" class="form-control" autocomplete="on" placeholder="Search Vehicle" required autofocus >

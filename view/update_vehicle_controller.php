@@ -8,7 +8,7 @@
 		if ($_GET['response'] =="notinserted"){
 			echo '<div class="alert alert-danger"><strong>Some problem occured!</strong> Not Updated.</div>';
 		}else{
-			echo '<div class="alert alert-success"><strong>Vehicle Added!</strong> </div>';
+			echo '<div class="alert alert-success"><strong>Vehicle Updated!</strong> </div>';
 		}
 	}
 ?>	
