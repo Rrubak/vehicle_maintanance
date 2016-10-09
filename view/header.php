@@ -36,7 +36,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="../img/default.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">User</span>
+              <span class="hidden-xs"><?php echo $_SESSION["adminDetails"]['name'];?></span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
